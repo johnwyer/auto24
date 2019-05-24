@@ -1,0 +1,677 @@
+
+.order {
+  &.adverts-add {
+    margin-top: 37px;
+    max-width: 1600px;
+    .order-head {
+      padding: 0 45px;
+      ul li:first-child .order-head_block {
+        margin-left: 0;
+      }
+    }
+
+    .order-head_block {
+      padding: 22px 0 21px 0;
+    }
+
+    .el-radio-button__inner {
+      font-size: 15px;
+      border-radius: 4px;
+    }
+    .order-body_up {
+      padding: 15px 45px 25px 45px;
+      &.order-title {
+        padding: 25px 45px 25px 45px;
+      }
+      &.cars-list {
+        padding: 0 45px 25px 45px;
+        .order-body_title {
+          padding: 35px 0 0 0;
+          &:nth-of-type(1) {
+            padding: 7px 0 0 0;
+          }
+        }
+      }
+      &.cars-list_model {
+        padding: 0 45px 25px 45px;
+        .order-body_title {
+          padding: 35px 0 0 0;
+          &:nth-of-type(1) {
+            padding: 12px 0 0 0;
+          }
+        }
+        .order-models_block {
+          margin-bottom: 1.7em;
+        }
+        .order-models_table {
+          padding-top: 18px;
+        }
+      }
+      &.cars-year {
+        padding: 12px 45px 25px 45px;
+        .order-body_title {
+          padding: 0;
+        }
+        .el-radio-group {
+          vertical-align: top;
+        }
+        .el-radio-button {
+          margin-right: 10px;
+        }
+        .el-radio-button__inner {
+          max-height: 40px;
+          padding: 12px 17px;
+          border-radius: 4px;
+          border:1px solid #e1e1e1;
+          &:hover {
+            color: @color-black;
+            border-color: @color-blue;
+          }
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+          box-shadow: none;
+          border-color: @color-blue;
+          background-color: #dbebfc;
+          color: @color-black;
+        }
+        .el-input {
+          font-size: 15px;
+          &__inner {
+            height: 40px;
+            width: 108px;
+            padding-left: 13px;
+            color: @color-black;
+            border-color: #e1e1e1;
+            .placeholder(@color-black);
+          }
+        }
+        .el-select .el-input .el-input__icon {
+          color: #e1e1e1;
+        }
+        .el-select:hover .el-input__inner {
+          border-color: @color-blue;
+        }
+        .el-select .el-input__inner:focus {
+          border-color: @color-blue;
+        }
+        .el-select-dropdown__item {
+          font-size: 15px;
+          color: @color-black;
+        }
+      }
+      .items-list {
+        position: relative;
+      }
+      &.cars-body-type {
+        padding-top: 12px;
+        padding-bottom: 15px;
+        .order-body_title {
+          padding-top: 0;
+          margin-bottom: 20px;
+        }
+        .items-list {
+          .flex(row,wrap,flex-start,flex-start);
+        }
+        .items-column {
+          margin-right: 3.38%;
+          width: 48.31%;
+          &:nth-of-type(2n) {
+            margin-right: 0;
+          }
+        }
+        .el-radio-group {
+          width: 100%;
+        }
+        .el-radio-button {
+          width: 31.74%;
+          margin-right: 2.38%;
+          margin-bottom: 2.38%;
+          &:nth-of-type(3n) {
+            margin-right: 0;
+          }
+        }
+        .el-radio-button__inner {
+          .flex(row,wrap,flex-start,center);
+          position: relative;
+          width: 100%;
+          height: 55px;
+          padding: 2px 17px;
+          border-radius: 4px;
+          border:1px solid transparent;
+          text-align: left;
+          overflow: hidden;
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+          box-shadow: none;
+          border-color: @color-blue;
+          background-color: #dbebfc;
+          color: @color-black;
+        }
+        .el-radio-button__inner-text {
+          display: table;
+          width: 100%;
+          .image {
+            display: table-cell;
+            vertical-align: middle;
+            width: 60px;
+            height: inherit;
+            svg,
+            img {
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 15px;
+            }
+          }
+          .text {
+            display: table-cell;
+            white-space: normal;
+            vertical-align: middle;
+            width: auto;
+            height: inherit;
+          }
+        }
+        .el-checkbox {
+          margin: 15px 10px 15px 0;
+        }
+        .el-checkbox__label {
+          padding-left: 10px;
+        }
+      }
+      &.cars-generation {
+        padding-top: 0;
+        padding-bottom: 22px;
+        .order-body_title {
+          padding-top: 0;
+          margin-bottom: 11px;
+        }
+        .el-radio-group {
+          width: 100%;
+        }
+        .el-radio-button {
+          margin: 0 1.35% 1.35% 0;
+          max-width: 210px;
+        }
+        .el-radio-button__inner {
+          padding: 9px;
+          text-align: left;
+          font-size: 15px;
+          border-radius: 4px;
+          border:1px solid transparent;
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+          box-shadow: none;
+          border-color: @color-blue;
+          background-color: #dbebfc;
+          color: @color-black;
+        }
+        .item-wrapper {
+          position: relative;
+          line-height: 1.3;
+        }
+        .item-image {
+          position: relative;
+          border-radius: 4px;
+          margin: 0 0 5px 0;
+          img {
+            border-radius: 4px;
+          }
+        }
+        .item-title {
+          display: block;
+          font-weight: 700;
+          margin-bottom: 3px;
+        }
+        .item-year {
+          display: block;
+          margin-bottom: 3px;
+        }
+      }
+      &.cars-engine {
+        padding-top: 0;
+        .order-body_title {
+          padding-top: 0;
+          margin-bottom: 10px;
+        }
+        .el-radio-button {
+          margin-right: 10px;
+        }
+        .el-radio-button__inner {
+          padding: 12px 17px;
+          border-radius: 4px;
+          border:1px solid #e1e1e1;
+          &:hover {
+            color: @color-black;
+            border-color: @color-blue;
+          }
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+          box-shadow: none;
+          border-color: @color-blue;
+          background-color: #dbebfc;
+          color: @color-black;
+        }
+        .el-checkbox {
+          margin-left: 6px;
+          &__label {
+            padding-left: 10px;
+          }
+        }
+      }
+      &.cars-drive {
+        padding-top: 11px;
+        .order-body_title {
+          padding-top: 0;
+          margin-bottom: 10px;
+        }
+        .el-radio-group {
+          width: 100%;
+        }
+        .el-radio-button {
+          margin-right: 0.67%;
+          min-width: 10.54%;
+        }
+        .el-radio-button__inner {
+          width: 100%;
+          padding: 12px 17px;
+          border-radius: 4px;
+          border:1px solid #e1e1e1;
+          &:hover {
+            color: @color-black;
+            border-color: @color-blue;
+          }
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+          box-shadow: none;
+          border-color: @color-blue;
+          background-color: #dbebfc;
+          color: @color-black;
+        }
+      }
+      &.cars-gearbox {
+        padding-top: 12px;
+        .order-body_title {
+          padding-top: 0;
+          margin-bottom: 10px;
+        }
+        .el-radio-group {
+          width: 100%;
+        }
+        .el-radio-button {
+          margin-right: 0.67%;
+          min-width: 10.54%;
+        }
+        .el-radio-button__inner {
+          width: 100%;
+          padding: 12px 17px;
+          border-radius: 4px;
+          border:1px solid #e1e1e1;
+          &:hover {
+            color: @color-black;
+            border-color: @color-blue;
+          }
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+          box-shadow: none;
+          border-color: @color-blue;
+          background-color: #dbebfc;
+          color: @color-black;
+        }
+      }
+      &.cars-engine-type {
+        padding-top: 12px;
+        padding-bottom: 34px;
+        .order-body_title {
+          padding-top: 0;
+          margin-bottom: 10px;
+        }
+        .el-radio-group {
+          .flex(column,wrap,flex-start,flex-start);
+          width: 100%;
+        }
+        .el-radio-button {
+          display: inline-block;
+          margin-right: 0.67%;
+          margin-bottom: 0.67%;
+          min-width: 22.3%;
+        }
+        .el-radio-button__inner {
+          width: 100%;
+          padding: 12px 17px;
+          border-radius: 4px;
+          border:1px solid #e1e1e1;
+          text-align: left;
+          &:hover {
+            color: @color-black;
+            border-color: @color-blue;
+          }
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+          box-shadow: none;
+          border-color: @color-blue;
+          background-color: #dbebfc;
+          color: @color-black;
+        }
+        .item-wrapper {
+          position: relative;
+          font-size: 17px;
+        }
+        .item-horse-power {
+          font-size: 18px;
+          font-weight: 500;
+          color: @color-blue;
+          padding: 0 12px 0 16px;
+        }
+        .item-volume {
+          padding: 0 10px 0 15px;
+        }
+        .item-years {
+          padding: 0 15px;
+        }
+      }
+    }
+    .order-title h1 {
+      font-weight: 500;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+    .order-body_ul {
+      padding: 10px 45px 25px 45px;
+      margin: 0;
+      ul li.img img {
+        width: 36px;
+      }
+    }
+    .order-body_btn {
+      .flex(row,wrap,flex-end,center);
+      height: 100px;
+      width: 100%;
+      padding: 10px 45px;
+      background-color: #ffffd9;
+      border-radius: 0 0 4px 4px;
+      .btn-red {
+        height: 50px;
+        width: 220px;
+        padding: 0 25px;
+        i {
+          font-size: 5px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .order-marks_block {
+      &.show-more {
+        border-color: @color-blue;
+        text-align: center;
+        color: @color-blue;
+        .size(155px,70px);
+        cursor:pointer;
+        &:hover{
+          .opacity(0.8);
+          background-color: transparent;
+        }
+        span {
+          display: inline-block;
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+        i{
+          display: inline-block;
+          font-size: 4px;
+        }
+        .marka-item{
+          .flex(column,nowrap,center,center);
+          height: inherit;
+        }
+      }
+    }
+
+    .cars-list_model {
+      .order-marks_block {
+        &.show-more {
+          border-color: transparent;
+          text-align: left;
+          color: @color-blue;
+          .size(20%, auto);
+          cursor:pointer;
+          margin:0 0 1.7em 0;
+          padding-right: 15px;
+          span {
+            display: inline-block;
+            font-size: 15px;
+            margin-bottom: 0;
+          }
+          .marka-item{
+            display: inline-block;
+            height: inherit;
+          }
+        }
+      }
+    }
+
+    .cars-color {
+      .order-body_title {
+        padding: 22px 0 0 0;
+        margin-bottom: 19px;
+      }
+      .el-radio-button {
+        margin: 0 15px 6px 0;
+        border-radius: 50%;
+        background-color: transparent;
+      }
+      .el-radio-button__inner {
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        font-size: 0;
+        border-radius: 50%;
+        .size(30px, 30px);
+        border: none;
+        background-color: inherit;
+        text-align: center;
+        &:before {
+          display: none;
+          content: "";
+          .size(46px, 46px);
+          border-radius: 50%;
+          background-color: inherit;
+          position: absolute;
+          left:-8px;
+          top:-8px;
+          transition: all 0.3s;
+        }
+        .circle {
+          display: block;
+          position: relative;
+          .size(30px, 30px);
+          background-color: inherit;
+          border-radius: 50%;
+          text-align: center;
+          z-index: 2;
+          transition: all 0.3s;
+          &:before {
+            display: none;
+            content: "";
+            .size(42px, 42px);
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            left:-6px;
+            top:-6px;
+            transition: all 0.3s;
+          }
+        }
+        .circle-content {
+          .flex(row,wrap,center,center);
+          position: relative;
+          .size(30px, 30px);
+          background-color: inherit;
+          border-radius: 50%;
+          text-align: center;
+          transition: all 0.3s;
+        }
+        i {
+          color:#fff;
+          font-size: 16px;
+          line-height: 12px;
+          opacity:0;
+          transition: all 0.3s;
+        }
+      }
+      .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+        box-shadow: none;
+        &:before{
+          display: block;
+        }
+        .circle {
+          &:before {
+            display: block;
+          }
+        }
+        i {
+          opacity: 1;
+        }
+      }
+      .el-radio-button {
+        &:nth-of-type(1){
+          .el-radio-button__inner {
+            .size(32px, 32px);
+            &:before{
+              left: -7px;
+              top: -7px;
+            }
+            i {
+              color: #dadada;
+            }
+            .circle {
+              .size(32px,32px);
+              &:before {
+                left: -5px;
+                top: -5px;
+              }
+            }
+            .circle-content {
+              .size(32px,32px);
+              border: 1px solid #dadada;
+            }
+          }
+          .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+            &:before {
+              background-color: #dadada;
+            }
+          }
+        }
+      }
+    }
+    .cars-step3 {
+      .order-body_title {
+        width: 100%;
+        display: block;
+      }
+      .row {
+        .flex(row,wrap,flex-start,flex-start);
+        .column {
+          width: 100%;
+          margin-right: 0;
+        }
+        .form-group{
+          width: 31.333%;
+          margin-right: 3%;
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+        .el-select {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .el-checkbox {
+          margin-top: 13px;
+        }
+        &.col-3 {
+          .column {
+            display: block;
+            width: 31.333%;
+            margin-right: 3%;
+            &:nth-of-type(3n) {
+              margin-right: 0;
+            }
+            &-row {
+              margin-bottom: 15px;
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+            .form-group {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+        }
+        &.col-1 {
+          .column-row {
+            display: grid;
+            grid-template-columns: 31.333% 31.333% 31.333%;
+            grid-template-rows:auto;
+            grid-column-gap:3%;
+            grid-row-gap:10px;
+            .form-group {
+              margin-right: 0;
+              &:nth-of-type(1) {
+                grid-column: 1;
+                grid-row: 1;
+                width: 100%;
+              }
+              &:nth-of-type(2) {
+                grid-column: 1;
+                grid-row: 2;
+                width: 100%;
+              }
+              &:nth-of-type(3) {
+                grid-column: 1;
+                grid-row: 3;
+                width: 100%;
+              }
+              &:nth-of-type(4) {
+                grid-column: 1;
+                grid-row: 4;
+                width: 100%;
+              }
+              &:nth-of-type(5) {
+                grid-column: 2;
+                grid-row: 1;
+                width: 100%;
+              }
+              &:nth-of-type(6) {
+                grid-column: 2;
+                grid-row: 2;
+                width: 100%;
+              }
+              &:nth-of-type(7) {
+                grid-column: 2;
+                grid-row: 3;
+                width: 100%;
+              }
+              &:nth-of-type(8) {
+                grid-column: 3;
+                grid-row: 1;
+                width: 100%;
+              }
+              &:nth-of-type(9) {
+                grid-column: 3;
+                grid-row: 2;
+                width: 100%;
+              }
+              &:nth-of-type(10) {
+                grid-column: 3;
+                grid-row: 3;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.sc-price{
+  margin-bottom:50px;
+  &_title{
+    font-size:18px;
+    font-weight:500;
+  }
+  &_wrapper{
+    padding:15px 30px;
+    &>ul{
+      .reset-around;
+      .flex(row,wrap,flex-start,flex-start);
+      padding:25px 0;
+      position: relative;
+      &>li{
+        width:~'calc(100% / 3 - 0.1px)';
+        padding:10px 10px 10px 50px;
+        margin-bottom: 5px;
+        min-height: 40px;
+        cursor: pointer;
+        .flex(row,nowrap,flex-start,flex-start);
+        &:hover{
+          &>.link{
+            color:@color-blue;
+          }
+          &>.svg{
+            svg{
+              fill:@color-blue!important;
+            }
+          }
+        }
+        &>.svg{
+          .size(35px);
+          margin-right: 10px;
+        }
+        &>.link{
+          width:~'calc(100% - 45px)';
+          padding-top:10px;
+        }
+        &.active{
+          &>.link{
+            color:@color-blue;
+          }
+          &>.svg{
+            svg{
+              fill:@color-blue!important;
+            }
+          }
+          &>.inner{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .inner{
+     display: none;
+     position: absolute;
+     width:~'calc(100% + 60px)';
+     left:-30px;
+     background-color: #eff5fe;
+     padding:0 45px 25px 45px;
+     cursor: default;
+     &-block{
+       .title{
+         font-weight:500;
+         margin:0 0 15px 0;
+       }
+       ul{
+         .reset-around;
+
+         li{
+           margin-bottom:7px;
+           padding-left:25px;
+           padding-right:10px;
+           .flex(row,nowrap,space-between,flex-start);
+           &:hover{
+             background-color: @color-lightblue2;
+           }
+           &>div{
+             &:first-child{
+               width:~'calc(100% - 150px)';
+               min-height: 35px;
+               padding-top:7px;
+             }
+             &:last-child{
+               width:125px;
+             }
+           }
+           input{
+             border: 1px solid rgb(216, 216, 216);
+             border-radius: 5px;
+             background-color: rgb(255, 255, 255);
+             width: 90px;
+             height: 35px;
+             padding:0 10px;
+             outline:none;
+             margin-right:5px;
+             &:focus{
+               border-color:@color-blue;
+             }
+           }
+           p{
+             margin:0 0 10px 0;
+           }
+         }
+       }
+     }
+     &-title{
+       padding:25px 0 10px 0;
+       border-bottom:1px solid #dce7f9;
+       margin:0 10px 15px 0;
+       .flex(row,nowrap,space-between,flex-start);
+     }
+     &-scroll{
+       //max-height: 150px;
+       //overflow-y: auto;
+       .el-scrollbar__wrap{
+         //max-height: 150px;
+       }
+     }
+   }
+}

@@ -1,14 +1,8 @@
 'use strict';
-//import VueGoogleAutocomplete from './components/vue-google-autocomplete';
-//import VueRecaptcha  from 'vue-recaptcha';
-//import Multiselect from 'vue-multiselect';
-//import getAddress from './components/Getaddress.vue';
-
-//import vClickOutside from 'v-click-outside';
-//Vue.use(vClickOutside);
 
 import { Scrollbar, Loading } from "element-ui";
 window.Vue.use(Scrollbar);
+
 window.bus = new Vue({
     data: {
         info: {
@@ -24,19 +18,13 @@ window.bus = new Vue({
     },
     watch: {
         socketData(val) {
-            //console.log(val);
-            //console.log('bus, socket data: ', JSON.stringify(val, null, 4));
             if (val.content) {
-                console.log('bus.content');
-                console.log(JSON.stringify(val, null, 4));
                 if (val.content.message) {
                     if (document.getElementById('serviceCabinet')) {
-                        //if(serviceCabinet.autoserviceId !== ""){
                         val.content.message.order_id = parseInt(val.content.message.order_id);
                         val.content.propun_price = parseInt(val.content.propun_price);
                         val.content.propun_parts = parseInt(val.content.propun_parts);
                         serviceCabinet.socket.message = val.content;
-                        //}
                     }
                 }
                 if (val.content.new_order) {
@@ -55,16 +43,14 @@ window.bus = new Vue({
                     }
                 }
             } else if (val.notification) {
-                console.log('bus.notification');
-                //console.log(val.notification)
                 if (document.getElementById('serviceCabinet')) {
                     if (serviceCabinet.autoserviceId === val.notification.autoservice_id) {
-                        console.log('client in chat');
+                        //console.log('client in chat');
                         val.notification.show = 1;
                         this.pushNotify(val.notification);
                         // client in chat with autoservice
                     } else if (val.notification.order_id === serviceCabinet.orderPageInfo.num && difUser === 'service') {
-                        console.log('autoservice in chat');
+                        //console.log('autoservice in chat');
                         // autoservice in chat
                         this.pushNotify(val.notification);
                     } else if (val.notification.order_id === serviceCabinet.orderPageInfo.num && difUser === 'client') {
@@ -74,7 +60,7 @@ window.bus = new Vue({
                         this.pushNotify(val.notification);
                     }
                 } else {
-                    console.log('not in service cabinet');
+                    //console.log('not in service cabinet');
                     this.pushNotify(val.notification);
                 }
             }
@@ -87,26 +73,16 @@ window.bus = new Vue({
 
             item.order_id = parseInt(item.order_id);
             item.autoservice_id = parseInt(item.autoservice_id);
-            //console.log('item.autoservice_id: ', item.autoservice_id);
-            //console.log('condition: ', Number.isNaN(item.autoservice_id) && difUser === 'service');
-            //console.log('Number.isNaN: ', Number.isNaN(item.autoservice_id));
             if (Number.isNaN(item.autoservice_id) && difUser === 'service') {
                 item.autoservice_id = parseInt(window.info.autoservice_id);
             }
-            //console.log('item.autoservice_id: ', item.autoservice_id);
-            console.log('new notify: ', JSON.stringify(item, null, 4));
+            //console.log('new notify: ', JSON.stringify(item, null, 4));
 
             if (document.getElementById('serviceCabinet')) {
                 serviceCabinet.requestToUpdateOrderMessagesCounter(item);
             }
 
             headerVue.notifyList.data.forEach((note, index) => {
-                //console.log(index, ' note item: ', JSON.stringify(note, null, 4));
-                //console.log(index, ' note item: ', note.order_id);
-                //console.log(note.autoservice_id !== item.autoservice_id && note.order_id === item.order_id && note.type === item.type && note.show === item.show);
-                //console.log(typeof note.type, ' - ', note.type);
-                //console.log(typeof item.type, ' - ', item.type);
-
                 if (difUser === 'client') {
                     if (document.getElementById('serviceCabinet')) {
                         if (serviceCabinet.autoserviceId === item.autoservice_id && note.order_id === item.order_id && note.type === item.type) {
@@ -147,7 +123,7 @@ window.bus = new Vue({
                 //console.log('intra in permissionToNotify');
                 if (document.getElementById('serviceCabinet') && difUser === 'service') {
                     if (serviceCabinet.isChatActive && item.type === 2 && serviceCabinet.clientId === item.autoservice_id && item.order_id === serviceCabinet.orderPageInfo.num) {
-                        //console.log('autoservice in chat and get new zapisi na remont');
+                        //console.log('autoservice in chat and get new record to repair');
                         item.show = 1;
                         headerVue.notifyMarkRead(item.order_id);
                     }
@@ -198,12 +174,8 @@ Vue.component('modal', {
 </transition>`
 });
 
-//var googlePas = false;
-//var googlePas2 = false;
-//import Clickoutside from 'element-ui/src/utils/clickoutside';
 window.headerVue = new Vue({
     el: '#header',
-    //performance: true,
     data: {
         modal: {
             auth: false,
@@ -223,7 +195,6 @@ window.headerVue = new Vue({
             left: 0,
             show: false,
             data: window.Laravel.notifications ? window.Laravel.notifications : []
-                //data:window.notifications ? window.notifications : []
         },
         userName: '',
         userBalanceAmount: null
@@ -407,9 +378,6 @@ window.headerVue = new Vue({
         );
 
         this.initWallet();
-        //let _self = this;
-        //window.addEventListener('resize', function(){ _self.notifyPosition() }, true);
-        // console.log(document.querySelector('.el-select').getBoundingClientRect().width)
     }
 });
 
